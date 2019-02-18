@@ -1,0 +1,33 @@
+$egg-width: 75px;
+
+body {
+  overflow-x: hidden;
+}
+
+.egg {
+  position: absolute;
+  left: -$egg-width;
+  width: $egg-width;
+  height: 100px;
+  background-image: url("../Images/egg.png");
+  background-position: center center;
+  background-size: contain;
+  &--rolling-stone{
+    animation: slide 2s infinite;
+  }
+}
+
+@-webkit-keyframes slide {
+  0% {
+    left: -$egg-width;
+    -webkit-transform: rotate(0deg);
+  }
+  50% {
+    left: 100%;
+    -webkit-transform: rotate(1440deg);
+  }
+  100% {
+    left: -$egg-width;
+    -webkit-transform: rotate(0deg);
+  }
+}
